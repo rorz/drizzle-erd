@@ -2,11 +2,11 @@
   "name": "drizzle-erd",
   "version": "0.1.0",
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
-  }, 
+    "build": "tsc --noEmit && esbuild ./src/index.ts --bundle --outdir=dist --minify --sourcemap"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
