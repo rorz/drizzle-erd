@@ -4,14 +4,25 @@
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --noEmit && esbuild ./src/index.ts --bundle --outdir=dist --minify --sourcemap"
+    "build": "tsc --noEmit && esbuild ./src/index.ts --bundle --outdir=dist --minify --platform=node",
+    "build:ts": "tsc",
+    "run-temp": "pnpm build && node dist/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-typescript": "^7.24.6",
+    "@softwaretechnik/dbml-renderer": "github:rorz/dbml-renderer",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
+    "drizzle-dbml-generator": "^0.6.1",
+    "drizzle-orm": "^0.31.0",
     "esbuild": "^0.21.4",
+    "jest": "^29.7.0",
     "typescript": "^5.4.5"
   }
 }
