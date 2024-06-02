@@ -4,8 +4,7 @@
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc --noEmit && esbuild ./src/index.ts --bundle --outdir=dist --minify --platform=node",
-    "build:ts": "tsc",
+    "build": "rm -rf dist && tsc",
     "run-temp": "pnpm build && node dist/index.js",
     "test": "jest"
   },
@@ -21,7 +20,6 @@
     "babel-jest": "^29.7.0",
     "drizzle-dbml-generator": "^0.6.1",
     "drizzle-orm": "^0.31.0",
-    "esbuild": "^0.21.4",
     "jest": "^29.7.0",
     "typescript": "^5.4.5"
   }

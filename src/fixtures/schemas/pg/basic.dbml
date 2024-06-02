@@ -1,0 +1,11 @@
+table user {
+  id text [pk, not null]
+  name text
+}
+
+table post {
+  id text [pk, not null]
+  user_id text
+}
+
+ref post_user_id_user_id_fk: post.user_id > user.id [delete: no action, update: no action]

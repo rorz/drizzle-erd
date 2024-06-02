@@ -13,21 +13,40 @@ class Logger {
     this.logStyle = logStyle;
   }
 
+  createOutput(message: string, data?: LogData) {
+    const output: [string, LogData?] = [message];
+    if (!data) return output;
+
+    if (data instanceof Error) {
+      output.push(data);
+    }
+    try {
+      output.push(JSON.stringify(data, null, 2));
+    } catch (_) {
+      output.push(data);
+    }
+
+    return output;
+  }
+
   debug(message: string, data?: LogData): void {
     if (this.logStyle === "Verbose") {
-      console.debug(message, data);
+      const output = this.createOutput(message, data);
+      console.debug(...output);
     }
   }
 
   log(message: string, data?: LogData): void {
     if (this.logStyle !== "Silent") {
-      console.debug(message, data);
+      const output = this.createOutput(message, data);
+      console.debug(...output);
     }
   }
 
   error(message: string, data?: LogData): void {
     if (this.logStyle !== "Silent") {
-      console.error(message, data);
+      const output = this.createOutput(message, data);
+      console.error(...output);
     }
   }
 }
