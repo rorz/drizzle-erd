@@ -3,7 +3,7 @@ import {
   pgGenerate,
   sqliteGenerate,
 } from "drizzle-dbml-generator";
-import { ProvidedSchema, RelationMethod, SchemaVariant } from "./types";
+import { ProvidedSchema, RelationMethod, SchemaVariant } from "./types.js";
 
 export const generateDbml = (
   schema: ProvidedSchema,

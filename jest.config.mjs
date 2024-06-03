@@ -3,4 +3,4 @@ const config = {
   testPathIgnorePatterns: ["dist"],
 };
 
-module.exports = config;
+export default config;

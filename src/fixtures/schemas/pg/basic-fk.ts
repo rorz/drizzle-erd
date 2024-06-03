@@ -1,6 +1,6 @@
 import { pgSchema, text } from "drizzle-orm/pg-core";
 
-const schema = pgSchema("fixture");
+const schema = pgSchema("");
 
 export const userTable = schema.table("user", {
   id: text("id").primaryKey(),

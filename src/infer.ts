@@ -1,6 +1,6 @@
 import util from "util";
-import { ProvidedSchema, SchemaVariant } from "./types";
-import { assert } from "./utils/assert";
+import { ProvidedSchema, SchemaVariant } from "./types.js";
+import { assert } from "./utils/assert.js";
 
 const onlyOne = (value: unknown, array: unknown[]) =>
   array.filter((v) => v === value).length === 1;

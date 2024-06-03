@@ -1,5 +1,5 @@
-import * as basicPgSchema from "./fixtures/schemas/pg/basic-fk";
-import { resolveSchemaAt } from "./resolve";
+import * as basicPgSchema from "./fixtures/schemas/pg/basic-fk.js";
+import { resolveSchemaAt } from "./resolve.js";
 
 describe("Drizzle ERD || Resolve", () => {
   it("resolves a basic PG schema path to its object form", async () => {

@@ -1,10 +1,10 @@
-import { inferSchemaVariant } from "./infer";
-import { SchemaVariant } from "./types";
+import { inferSchemaVariant } from "./infer.js";
+import { SchemaVariant } from "./types.js";
 
-import * as basicFkPgSchema from "./fixtures/schemas/pg/basic-fk";
-import * as basicFkMySqlSchema from "./fixtures/schemas/mysql/basic-fk";
-import * as basicFkSQLiteSchema from "./fixtures/schemas/sqlite/basic-fk";
-import * as basicMixedSchema from "./fixtures/schemas/mixed/basic";
+import * as basicFkPgSchema from "./fixtures/schemas/pg/basic-fk.js";
+import * as basicFkMySqlSchema from "./fixtures/schemas/mysql/basic-fk.js";
+import * as basicFkSQLiteSchema from "./fixtures/schemas/sqlite/basic-fk.js";
+import * as basicMixedSchema from "./fixtures/schemas/mixed/basic.js";
 
 describe("Drizzle ERD || Infer", () => {
   it("infers a basic Postgres schema", () => {
