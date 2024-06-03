@@ -35,7 +35,7 @@ export const generateErd = async ({
 
     logger.debug("⚪️ Generating DBML");
     const dbml = generateDbml(resolvedSchema, schemaVariant, relationMethod);
-    logger.debug("🟢 Generated DBML", { dbml });
+    logger.debug("🟢 Generated DBML");
 
     logger.debug("⚪️ Generating SVG");
     const svg = generateSvg(dbml);

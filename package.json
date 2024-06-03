@@ -9,6 +9,9 @@
     "run-temp": "pnpm build && node dist/index.js",
     "test": "jest"
   },
+  "bin": {
+    "drizzle-erd": "./dist/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",

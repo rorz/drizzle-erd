@@ -6,7 +6,7 @@ const onlyOne = (value: unknown, array: unknown[]) =>
   array.filter((v) => v === value).length === 1;
 
 export const inferSchemaVariant = (schema: ProvidedSchema): SchemaVariant => {
-  const objectDump = util.inspect(schema);
+  const objectDump = util.inspect(schema, { depth: Infinity, getters: true });
 
   const containsPgTable = objectDump.includes("PgTable");
   const containsMySqlTable = objectDump.includes("MySqlTable");
