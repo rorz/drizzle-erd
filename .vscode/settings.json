@@ -1,3 +1,23 @@
 {
-  "cSpell.words": ["dbml"]
+  "cSpell.words": ["dbml"],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e7b70d",
+    "activityBar.background": "#e7b70d",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#077960",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#e7b70d",
+    "statusBar.background": "#b7910a",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#876b07",
+    "statusBarItem.remoteBackground": "#b7910a",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#b7910a",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#b7910a99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#B7910A"
 }
