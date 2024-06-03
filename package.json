@@ -1,6 +1,6 @@
 {
   "name": "drizzle-erd",
-  "version": "0.1.0",
+  "version": "0.0.1-alpha",
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
   "main": "dist/index.js",
   "type": "module",
