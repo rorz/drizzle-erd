@@ -13,7 +13,6 @@ program.option("--verbose");
 program.parse();
 
 const options = program.opts();
-console.log("OPTIONS:", JSON.stringify(options, null, 2));
 
 const { svg } = await generateErd({
   schema: options.path,
