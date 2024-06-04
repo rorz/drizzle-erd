@@ -17,7 +17,7 @@
     "url": "https://github.com/rorz/drizzle-erd.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "rorz",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.6",
