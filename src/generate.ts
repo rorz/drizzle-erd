@@ -9,7 +9,7 @@ interface DrizzleErdOpts {
   logStyle?: LogStyle;
   schema: ProvidedSchema | string;
   relationMethod?: RelationMethod;
-  outFile?: string;
+  outPath?: string;
 }
 
 interface DrizzleErdResult {
@@ -21,7 +21,7 @@ export const generateErd = async ({
   schema: schemaOrPath,
   relationMethod = "ForeignKey",
   logStyle = "Default",
-  outFile,
+  outPath,
 }: DrizzleErdOpts): Promise<DrizzleErdResult> => {
   logger.setLogStyle(logStyle);
 

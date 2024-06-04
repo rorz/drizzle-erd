@@ -14,7 +14,7 @@ class Logger {
   }
 
   createOutput(message: string, data?: LogData) {
-    const output: [string, LogData?] = [message];
+    const output: [string, LogData?] = [`[drizzle-erd]: ${message}`];
     if (!data) return output;
 
     if (data instanceof Error) {
