@@ -1,5 +1,4 @@
 import { logger, LogStyle } from "./utils/logger.js";
-import { resolveSchemaAt } from "./resolve.js";
 import { ProvidedSchema, RelationMethod } from "./types.js";
 import { inferSchemaVariant } from "./infer.js";
 import { generateDbml } from "./dbml.js";
@@ -7,7 +6,7 @@ import { generateSvg } from "./svg.js";
 
 interface DrizzleErdOpts {
   logStyle?: LogStyle;
-  schema: ProvidedSchema | string;
+  schema: ProvidedSchema;
   relationMethod?: RelationMethod;
   outPath?: string;
 }
@@ -18,7 +17,7 @@ interface DrizzleErdResult {
 }
 
 export const generateErd = async ({
-  schema: schemaOrPath,
+  schema,
   relationMethod = "ForeignKey",
   logStyle = "Default",
   outPath,
@@ -26,15 +25,10 @@ export const generateErd = async ({
   logger.setLogStyle(logStyle);
 
   try {
-    const isAPath = typeof schemaOrPath === "string";
-    const resolvedSchema: ProvidedSchema = isAPath
-      ? await resolveSchemaAt(schemaOrPath)
-      : schemaOrPath;
-
-    const schemaVariant = inferSchemaVariant(resolvedSchema);
+    const schemaVariant = inferSchemaVariant(schema);
 
     logger.debug("⚪️ Generating DBML");
-    const dbml = generateDbml(resolvedSchema, schemaVariant, relationMethod);
+    const dbml = generateDbml(schema, schemaVariant, relationMethod);
     logger.debug("🟢 Generated DBML");
 
     logger.debug("⚪️ Generating SVG");
