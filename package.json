@@ -18,7 +18,12 @@
     "type": "git",
     "url": "https://github.com/rorz/drizzle-erd.git"
   },
-  "keywords": [],
+  "keywords": [
+    "drizzle",
+    "drizzle-orm",
+    "erd",
+    "dbml"
+  ],
   "author": "rorz",
   "license": "MIT",
   "devDependencies": {
@@ -30,7 +35,7 @@
     "@types/node": "^20.14.0",
     "babel-jest": "^29.7.0",
     "commander": "^12.1.0",
-    "drizzle-dbml-generator": "^0.6.1",
+    "drizzle-dbml-generator": "github:rorz/drizzle-dbml-generator",
     "drizzle-orm": "^0.31.0",
     "jest": "^29.7.0",
     "tsup": "^8.1.0",
