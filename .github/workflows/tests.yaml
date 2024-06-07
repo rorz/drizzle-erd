@@ -1,0 +1,19 @@
+name: Run tests
+run-name: ${{ github.actor }}
+on: [push]
+jobs:
+  Explore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - run: pnpm i
+      - run: pnpm build
+      - name: Test CLI interface
+        run: node ./dist/cli.js --in ./src/fixtures/schemas/pg/basic-fk.ts --out erd-gh-actions-test.svg
+      - name: Run unit tests
+        run: pnpm test
