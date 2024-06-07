@@ -4,9 +4,9 @@
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
   "type": "module",
   "scripts": {
-    "build:base": "pnpm tsup ./src/index.ts  --sourcemap --dts",
-    "build:module": "tsc",
-    "build": "rm -rf ./dist && pnpm build:base && pnpm build:module",
+    "build:api": "pnpm tsup ./src/index.ts  --sourcemap --dts",
+    "build:cli": "pnpm tsup ./src/cli.ts --format esm",
+    "build": "rm -rf ./dist && pnpm build:api && pnpm build:cli",
     "run": "drizzle-erd",
     "test": "jest"
   },
@@ -26,20 +26,24 @@
   ],
   "author": "rorz",
   "license": "MIT",
+  "dependencies": {
+    "@rorz/dbml-renderer": "^1.0.32",
+    "@rorz/drizzle-dbml-generator": "^0.7.0",
+    "@softwaretechnik/dbml-renderer": "github:rorz/dbml-renderer",
+    "commander": "^12.1.0",
+    "drizzle-dbml-generator": "github:rorz/drizzle-dbml-generator",
+    "tsx": "^4.11.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.6",
     "@babel/preset-env": "^7.24.6",
     "@babel/preset-typescript": "^7.24.6",
-    "@softwaretechnik/dbml-renderer": "github:rorz/dbml-renderer",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.0",
     "babel-jest": "^29.7.0",
-    "commander": "^12.1.0",
-    "drizzle-dbml-generator": "github:rorz/drizzle-dbml-generator",
     "drizzle-orm": "^0.31.0",
     "jest": "^29.7.0",
     "tsup": "^8.1.0",
-    "tsx": "^4.11.2",
     "typescript": "^5.4.5"
   }
 }
