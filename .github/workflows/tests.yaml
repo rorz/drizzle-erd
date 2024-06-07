@@ -2,7 +2,7 @@ name: Run tests
 run-name: ${{ github.actor }}
 on: [push]
 jobs:
-  Explore:
+  Tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
