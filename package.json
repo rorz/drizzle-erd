@@ -1,6 +1,6 @@
 {
   "name": "drizzle-erd",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1-alpha.5",
   "description": "Entity-relationship diagram (ERD) generator for Drizzle.",
   "type": "module",
   "scripts": {
