@@ -1,3 +1,3 @@
-describe("Drizzle ERD --[End-to-End]--", () => {
-  it.todo("Example");
-});
+import test from "ava";
+
+test.todo("base level tests");
