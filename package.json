@@ -29,9 +29,7 @@
   "dependencies": {
     "@rorz/dbml-renderer": "^1.0.32",
     "@rorz/drizzle-dbml-generator": "^0.7.0",
-    "@softwaretechnik/dbml-renderer": "github:rorz/dbml-renderer",
     "commander": "^12.1.0",
-    "drizzle-dbml-generator": "github:rorz/drizzle-dbml-generator",
     "tsx": "^4.11.2"
   },
   "devDependencies": {
