@@ -1,12 +1,15 @@
-<img src="./drizzle-erd-logo.png" width=128 />
+<p align="center">
+  <img src="./drizzle-erd-logo.png" width=128 />
+  <h1 align="center">Drizzle ERD</h1>
+</p>
 
-# Drizzle ERD
+> A super-simple way to generate Entity-Relationship Diagrams (ERDs) from your Drizzle schema. Use case (CLI or in-code) and dialect (PG, MySQL, SQLite) agnostic!
 
-A super-simple way to generate Entity-Relationship Diagrams (ERDs) from your Drizzle schema. Use case (CLI or in-code) and dialect (PG, MySQL, SQLite) agnostic!
+[![Tests](https://github.com/rorz/drizzle-erd/actions/workflows/tests.yaml/badge.svg)](https://github.com/rorz/drizzle-erd/actions/workflows/tests.yaml)
+[![Downloads](https://badgen.net/npm/dt/drizzle-erd)](https://www.npmjs.com/package/drizzle-erd)
 
-## COMING SOON!
-
-Currently in-progress, but releasing shortly!
+>[!IMPORTANT]
+>Drizzle ERD is in **pre-release** and is not ready for production-reliant use cases.
 
 ## Alpha usage
 
