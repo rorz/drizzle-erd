@@ -8,12 +8,16 @@
 [![Tests](https://github.com/rorz/drizzle-erd/actions/workflows/tests.yaml/badge.svg)](https://github.com/rorz/drizzle-erd/actions/workflows/tests.yaml)
 [![Downloads](https://badgen.net/npm/dt/drizzle-erd)](https://www.npmjs.com/package/drizzle-erd)
 
->[!IMPORTANT]
->Drizzle ERD is in **pre-release** and is not ready for production-reliant use cases.
+> [!IMPORTANT]
+> Drizzle ERD is in **pre-release** and is not ready for production-reliant use cases.
 
 ## Alpha usage
 
-If you'd like to use this package right now, in lieu of any proper documentation, here's how to get started:
+If you'd like to use this package right now, in lieu of any proper documentation, here's how to get started.
+
+### CLI
+
+Call `drizzle-erd` directly from `npm` or `pnpm` from a script in your `package.json` like so:
 
 ```jsonc
 {
@@ -25,10 +29,15 @@ If you'd like to use this package right now, in lieu of any proper documentation
 }
 ```
 
-You basically just call the `drizzle-erd` binary / CLI tool with two arguments for now:
+### Options
 
-- `--in` :: the path to your TS schema file
-- `--out` :: what you want your SVG to be called
+The following CLI flags are available to be used with `drizzle-erd`.
+
+| Name                            | Flag        | Description                                                                              |
+| ------------------------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| [Required] <br /> Schema source | `--in`      | The path to your Drizzle `schema.ts` file.                                               |
+| [Required] <br /> SVG output    | `--out`     | The destination path (and filename) of the output SVG. (Overwrites if already exists)    |
+| Debug logs                      | `--verbose` | Provide this flag to print the status of the schema generation with debug-level logging. |
 
 ### Add your ERD to your README
 
