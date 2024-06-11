@@ -22,7 +22,8 @@
     "drizzle",
     "drizzle-orm",
     "erd",
-    "dbml"
+    "dbml",
+    "diagram"
   ],
   "author": "rorz",
   "license": "MIT",
